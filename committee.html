@@ -1,42 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="kn">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Committee | Bandhavya Bengaluru</title>
-  <meta name="description" content="Office bearers and committee members of Bandhavya Bengaluru Charitable Trust (R).">
+  <title>ಸಮಿತಿಯ ವಿವರ | ಬೆಂಗಳೂರು ಬಂಧವ್ಯ ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ)</title>
+  <meta name="description" content="ಬೆಂಗಳೂರು ಬಂಧವ್ಯ ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ) — ಅಫೀಸ್‌ ಬೇರೆರ್ಸ್ ಮತ್ತು ಸಮಿತಿ ಸದಸ್ಯರ ವಿವರಗಳು.">
 
-  <!-- Bootstrap -->
-  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+  <!-- ಕನ್ನಡ ಫಾಂಟ್ + Bootstrap (ನಿಮ್ಮಲ್ಲಿ ಲೊಕಲ್ ಫೈಲ್ ಇದ್ದರೆ ಸ್ವಾಪ್ ಮಾಡಿ) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Optional site CSS -->
-  assets/css/style.css
+  <!-- ನಿಮ್ಮ ಸೈಟ್‌ವೈಡ್ CSS ಇದ್ದರೆ: -->
+  <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
 
   <style>
     :root{
       --brand:#0d6efd;
       --muted:#6c757d;
     }
-    html { scroll-behavior: smooth; }
-    body { line-height: 1.6; }
+    html{ scroll-behavior: smooth; }
+    body{
+      font-family: 'Noto Sans Kannada', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color:#212529;
+    }
 
+    /* Navbar */
     .navbar .nav-link.active{
       color:var(--brand)!important;
       font-weight:600;
       border-bottom:2px solid var(--brand);
     }
 
+    /* Header / Sections */
     .page-header{ background:#f8f9fa; }
+    .section-title{ font-weight:700; margin-bottom:.25rem; }
+    .section-sub { color:var(--muted); margin-bottom:1.25rem; }
 
-    .section-title{
-      font-weight:700;
-      margin-bottom:.25rem;
-    }
-    .section-sub{
-      color:var(--muted);
-      margin-bottom:1.5rem;
-    }
-
+    /* Cards */
     .member-card{
       border:0;
       border-radius:12px;
@@ -45,134 +48,138 @@
       height:100%;
       background:#fff;
     }
-    .member-name{
-      font-weight:600;
-      margin-bottom:4px;
-    }
-    .member-role{
-      color:#0d6efd;
-      font-size:.95rem;
-    }
+    .member-name{ font-weight:600; margin-bottom:4px; }
+    .member-role{ color:#0d6efd; font-size:.95rem; }
   </style>
 </head>
 <body>
 
-<!-- ================= Navbar ================= -->
-<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-  <div class="container">
-    <a class="navbar-brand fw-semibold" href="index.html">
-      Bengaluru Bandhavya Charitable Trust (R)
-    </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="mainNav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link active" href="committee.html">Committee</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <!-- ===== Navbar (ನಿಮ್ಮ ಇತರ ಪುಟಗಳಿಗೆ ಹೊಂದಿಕೆಯಂತೆ) ===== -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" aria-label="Primary">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="index.html">ಬೆಂಗಳೂರು ಬಂಧವ್ಯ ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ)</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<!-- ================= Header ================= -->
-<header class="page-header py-5 text-center">
-  <div class="container">
-    <h1 class="section-title">Committee</h1>
-    <p class="section-sub">Office Bearers and Committee Members</p>
-  </div>
-</header>
-
-<!-- ================= Executive Committee ================= -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="section-title">Executive Committee</h2>
-    <p class="section-sub">Key office bearers guiding the trust</p>
-
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="member-card">
-          <div class="member-name">Sri. M. Manjunath</div>
-          <div class="member-role">President</div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="member-card">
-          <div class="member-name">Sri. Vishweshwarappa, S.</div>
-          <div class="member-role">Honorary President</div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="member-card">
-          <div class="member-name">Dr. Prasanna S. R.</div>
-          <div class="member-role">Vice President</div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="member-card">
-          <div class="member-name">Dr. Nagaraj A. B.</div>
-          <div class="member-role">Secretary</div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="member-card">
-          <div class="member-name">Smt. Kavitha S.</div>
-          <div class="member-role">Treasurer</div>
-        </div>
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">ಮುಖಪುಟ</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ಬಗ್ಗೆ</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">ಚಿತ್ರ ಸಂಕಲನ</a></li>
+          <li class="nav-item"><a class="nav-link" href="committee.html">ಸಮಿತಿ</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">ಸಂಪರ್ಕ</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- ================= Committee Members ================= -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="section-title">Committee Members</h2>
-    <p class="section-sub">Dedicated members supporting the trust</p>
-
-    <div class="row g-4">
-
-      <!-- Repeatable simple cards -->
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Smt. Dakshayini M.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Arun Kumar K. T.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Nagaraju L.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Navin Kumar B.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Dr. Basavaraja C.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Mrithyunjaya D. T.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Basavaraj G. M.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Shanmukha S. S.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Thippeswamy K. B.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Appanna R.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Bhagyesh G. L.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Jagadish S. R.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Mallikarjuna K. N.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Mahadevappa M.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Somashekhar S. T.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Shivaswamy M. M.</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Basavesh Kanive</div></div></div>
-      <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">Sri. Thippeswamy K. R.</div></div></div>
-
+  <!-- ===== Header ===== -->
+  <header class="page-header py-5 text-center">
+    <div class="container">
+      <h1 class="section-title">ಸಮಿತಿಯ ವಿವರ</h1>
+      <p class="section-sub mb-0">ಅಫೀಸ್‌ ಬೇರೆರ್ಸ್ ಹಾಗೂ ಸಮಿತಿ ಸದಸ್ಯರ ಹೆಸರುಗಳ ಪಟ್ಟಿ</p>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- ================= Footer ================= -->
-<footer class="bg-white border-top py-4">
-  <div class="container text-center">
-    <small>© <span id="year"></span> Bengaluru Bandhavya Charitable Trust (R). All rights reserved.</small>
-  </div>
-</footer>
+  <!-- ===== Executive / Office Bearers ===== -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">ಕಾರ್ಯಕಾರಿ ಸಮಿತಿ (ಅಫೀಸ್‌ ಬೇರೆರ್ಸ್)</h2>
+      <p class="section-sub">ಟ್ರಸ್ಟ್‌ನ ಕಾರ್ಯಚಟುವಟಿಕೆಗಳನ್ನು ಮುನ್ನಡೆಸುವ ಪ್ರಮುಖರಾದವರು</p>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="member-card">
+            <div class="member-name">ಶ್ರೀ. ಎಂ. ಮಂಜುನಾಥ</div>
+            <div class="member-role">ಅಧ್ಯಕ್ಷರು (President)</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="member-card">
+            <div class="member-name">ಶ್ರೀ. ವಿಶ್ವೇಶ್ವರಪ್ಪ ಎಸ್.</div>
+            <div class="member-role">ಗೌರವಾಧ್ಯಕ್ಷರು (Honorary President)</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="member-card">
+            <div class="member-name">ಡಾ. ಪ್ರಸನ್ನ ಎಸ್. ಆರ್.</div>
+            <div class="member-role">ಉಪಾಧ್ಯಕ್ಷರು (Vice President)</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="member-card">
+            <div class="member-name">ಡಾ. ನಾಗರಾಜ್ ಎ. ಬಿ.</div>
+            <div class="member-role">ಕಾರ್ಯದರ್ಶಿಗಳು (Secretary)</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="member-card">
+            <div class="member-name">ಶ್ರೀಮತಿ ಕವಿತಾ ಎಸ್.</div>
+            <div class="member-role">ಖಜಾಂಚಿ (Treasurer)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Committee Members ===== -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">ಸಮಿತಿ ಸದಸ್ಯರು</h2>
+      <p class="section-sub">ಟ್ರಸ್ಟ್‌ಗೆ ಬೆಂಬಲ ಹಾಗೂ ಸೇವೆ ನೀಡುವ ಸದಸ್ಯರು</p>
+
+      <div class="row g-4">
+        <!-- ಪ್ರತಿಯೊಬ್ಬ ಸದಸ್ಯನಿಗೂ ಒಂದು ಕಾರ್ಡ್ — ಅಗತ್ಯವಿದ್ದರೆ ಫೋಟೋಗಳನ್ನು ನಂತರ ಸೇರಿಸಬಹುದು -->
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀಮತಿ ದಕ್ಷಾಯಿಣಿ ಎಂ.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಅರುಣ್ ಕುಮಾರ್ ಕೆ.ಟಿ.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ನಾಗರಾಜು ಎಲ್.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ನವೀನ್ ಕುಮಾರ್ ಬಿ.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಡಾ. ಬಸವರಾಜ ಸಿ.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಮೃದ್ಯುಂಜಯ ಡಿ.ಟಿ.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಬಸವರಾಜ ಜಿ.ಎಂ.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಶಣ್ಮುಖ ಎಸ್.ಎಸ್.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ತಿಪ್ಪೇಸ್ವಾಮಿ ಕೆ.ಬಿ.</div></div></div>
+
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಅಪ್ಪಣ್ಣ ಆರ್.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಭಗ್ಯೇಶ್ ಜಿ.ಎಲ್.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಜಗದೀಶ್ ಎಸ್.ಆರ್.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಮಲ್ಲಿಕಾರ್ಜುನ ಕೆ.ಎನ್.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಮಹದೇವಪ್ಪ ಎಂ.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಸೋಮಶೇಖರ ಎಸ್.ಟಿ.</div></div></div>
+
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಶಿವಸ್ವಾಮಿ ಎಂ.ಎಂ.</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ಬಸವೇಶ ಕಣಿವೆ</div></div></div>
+        <div class="col-sm-6 col-md-4"><div class="member-card"><div class="member-name">ಶ್ರೀ. ತಿಪ್ಪೇಸ್ವಾಮಿ ಕೆ.ಆರ್.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="bg-white border-top py-4">
+    <div class="container text-center">
+      <small>© <span id="year"></span> ಬೆಂಗಳೂರು ಬಂಧವ್ಯ ಚಾರಿಟೆಬಲ್ ಟ್ರಸ್ಟ್ (ರಿ). ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</small>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ಫೂಟರ್ ವರ್ಷ
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Active nav highlight
+    (function () {
+      const path = location.pathname.split('/').pop() || 'committee.html';
+      document.querySelectorAll('.navbar .nav-link').forEach(function (a) {
+        if (a.getAttribute('href') === path) a.classList.add('active');
+      });
+    })();
+  </script>
 </body>
 </html>
