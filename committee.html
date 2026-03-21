@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Committee | [Your Community Name]</title>
+  <meta name="description" content="Meet the leadership and committee members of [Your Community Name] for the term 2025–2027.">
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #222;
+      --muted: #555;
+      --brand: #1e88e5; /* primary accent */
+      --brand-2: #f6f9ff; /* light accent background */
+      --card: #ffffff;
+      --border: #e6e6e6;
+      --gold: #c9a227; /* awards/honor accent if needed */
+      --shadow: 0 8px 24px rgba(0,0,0,.06);
+      --radius: 16px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root{
+        --bg:#0e1116;
+        --text:#f3f5f7;
+        --muted:#c6cbd2;
+        --brand:#66a6ff;
+        --brand-2:#0b1b33;
+        --card:#12161d;
+        --border:#1c2330;
+        --shadow: 0 10px 28px rgba(0,0,0,.35);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+
+    /* Top Nav (optional minimal) */
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--card);
+      position: sticky; top:0; z-index: 100;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:700;
+    }
+    .brand img{ width:32px; height:32px; object-fit:cover; border-radius:8px; }
+    .nav a{ margin-left:16px; font-weight:600; }
+
+    /* Hero */
+    .hero{
+      padding: 48px 20px;
+      background: linear-gradient(135deg, var(--brand-2), transparent 60%);
+      border-bottom: 1px solid var(--border);
+    }
+    .container{
+      max-width: 1100px; margin: 0 auto;
+    }
+    .hero h1{
+      margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px);
+      letter-spacing: -0.02em;
+    }
+    .subtle{ color: var(--muted); }
+    .term-badge{
+      display:inline-flex; align-items:center; gap:8px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 6px 10px; border-radius: 999px; font-size: 14px; margin-top: 8px;
+    }
+
+    /* Section headings */
+    .section{
+      padding: 28px 20px;
+    }
+    .section h2{
+      font-size: clamp(22px, 3.2vw, 28px);
+      margin: 0 0 16px;
+    }
+    .section p.lead{
+      margin-top: 0; color: var(--muted);
+    }
+
+    /* Cards */
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+    .card{
+      grid-column: span 12;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display:flex; gap:16px; align-items:center;
+    }
+    .card.featured{
+      border-width: 2px;
+      border-color: var(--brand);
+    }
+    .avatar{
+      width: 72px; height: 72px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--border);
+      background: #ddd;
+      flex: 0 0 auto;
+    }
+    .person{
+      display:flex; flex-direction:column; gap:2px;
+    }
+    .name{
+      font-weight: 700; font-size: 18px;
+    }
+    .role{
+      color: var(--muted); font-size: 14px;
+    }
+    .meta{
+      margin-top: 6px; font-size: 14px; color: var(--muted);
+    }
+
+    /* Grid behavior */
+    /* Office bearers: 3-up on desktop, 1–2 on small screens */
+    .office .card{ grid-column: span 12; }
+    @media (min-width: 640px){
+      .office .card{ grid-column: span 6; }
+    }
+    @media (min-width: 900px){
+      .office .card{ grid-column: span 4; }
+    }
+
+    /* Members: 2–4 columns */
+    .members .card{ grid-column: span 12; }
+    @media (min-width: 640px){
+      .members .card{ grid-column: span 6; }
+    }
+    @media (min-width: 900px){
+      .members .card{ grid-column: span 3; }
+    }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid var(--border);
+      padding: 24px 20px; color: var(--muted);
+      background: var(--card);
+      margin-top: 20px;
+    }
+
+    /* Print-friendly */
+    @media print {
+      .topbar { position: static; }
+      .hero { background: none; border-bottom: 1px solid #ccc; }
+      a { color: black; text-decoration: none; }
+      .card { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation (optional) -->
+  <header class="topbar" role="banner">
+    <div class="brand">
+      <!-- Replace with your community logo -->
+      <img src="logo.png" alt="[Community] logo" />
+      <span>[Your Community Name]</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <strong>Committee</strong>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero / Intro -->
+  <section class="hero" role="region" aria-labelledby="committee-title">
+    <div class="container">
+      <h1 id="committee-title">Our Committee</h1>
+      <p class="subtle">Meet the leaders and members serving our community with dedication.</p>
+      <div class="term-badge" aria-label="Term">
+        <span>Term:</span> <strong>2025 – 2027</strong>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content" class="container" role="main">
+    <!-- Office Bearers -->
+    <section class="section office" aria-labelledby="office-bearers">
+      <h2 id="office-bearers">Office Bearers</h2>
+      <p class="lead">Core leadership guiding initiatives, events, and community outreach.</p>
+
+      <div class="cards">
+        <!-- President -->
+        <article class="card featured" aria-label="President">
+          <img class="avatar" src="images/president.jpg" alt="Photo of [President Name]">
+          <div class="person">
+            <div class="name">[President Name]</div>
+            <div class="role">President</div>
+            <div class="meta">Email: <a href="mailto:president@example.org">president@example.org</a></div>
+          </div>
+        </article>
+
+        <!-- Vice President -->
+        <article class="card featured" aria-label="Vice President">
+          <img class="avatar" src="images/vice-president.jpg" alt="Photo of [Vice President Name]">
+          <div class="person">
+            <div class="name">[Vice President Name]</div>
+            <div class="role">Vice President</div>
+            <div class="meta">Focus: Programs & Outreach</div>
+          </div>
+        </article>
+
+        <!-- Secretary -->
+        <article class="card featured" aria-label="Secretary">
+          <img class="avatar" src="images/secretary.jpg" alt="Photo of [Secretary Name]">
+          <div class="person">
+            <div class="name">[Secretary Name]</div>
+            <div class="role">Secretary</div>
+            <div class="meta">Email: <a href="mailto:secretary@example.org">secretary@example.org</a></div>
+          </div>
+        </article>
+
+        <!-- Treasurer (optional) -->
+        <article class="card" aria-label="Treasurer">
+          <img class="avatar" src="images/treasurer.jpg" alt="Photo of [Treasurer Name]">
+          <div class="person">
+            <div class="name">[Treasurer Name]</div>
+            <div class="role">Treasurer</div>
+            <div class="meta">Finance & Compliance</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Committee Members -->
+    <section class="section members" aria-labelledby="committee-members">
+      <h2 id="committee-members">Committee Members</h2>
+      <p class="lead">Volunteers and coordinators supporting events, culture, and knowledge sharing.</p>
+
+      <div class="cards">
+        <!-- Repeat these cards for each member -->
+        <article class="card" aria-label="Member">
+          <img class="avatar" src="images/member1.jpg" alt="Photo of [Member Name]">
+          <div class="person">
+            <div class="name">[Member Name]</div>
+            <div class="role">Member</div>
+            <div class="meta">Cultural Programs</div>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Member">
+          <img class="avatar" src="images/member2.jpg" alt="Photo of [Member Name]">
+          <div class="person">
+            <div class="name">[Member Name]</div>
+            <div class="role">Member</div>
+            <div class="meta">Knowledge Sessions</div>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Member">
+          <img class="avatar" src="images/member3.jpg" alt="Photo of [Member Name]">
+          <div class="person">
+            <div class="name">[Member Name]</div>
+            <div class="role">Member</div>
+            <div class="meta">Logistics</div>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Member">
+          <img class="avatar" src="images/member4.jpg" alt="Photo of [Member Name]">
+          <div class="person">
+            <div class="name">[Member Name]</div>
+            <div class="role">Member</div>
+            <div class="meta">Sponsorship</div>
+          </div>
+        </article>
+
+        <!-- Add more member cards as needed -->
+      </div>
+    </section>
+
+    <!-- Optional: Advisory / Past Presidents -->
+    <section class="section" aria-labelledby="advisory">
+      <h2 id="advisory">Advisory Panel (Optional)</h2>
+      <p class="lead">Guidance from senior members and past office bearers.</p>
+      <div class="cards">
+        <article class="card" aria-label="Advisor">
+          <img class="avatar" src="images/advisor1.jpg" alt="Photo of [Advisor Name]">
+          <div class="person">
+            <div class="name">[Advisor Name]</div>
+            <div class="role">Advisor</div>
+            <div class="meta">Past President (2022–2024)</div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div>© <span id="year"></span> [Your Community Name]. All rights reserved.</div>
+      <div>President: [President Name] • Secretary: [Secretary Name]</div>
+    </div>
+  </footer>
+
+  <script>
+    // Auto year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

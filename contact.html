@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bandhavya Bengaluru – Home</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Bandhavya Bengaluru</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="articles.html">Articles</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <img src="assets/images/hero/cover.jpg" class="img-fluid rounded" alt="Community banner" />
+      <h1 class="mt-4">Welcome to Bandhavya Bengaluru</h1>
+      <p class="lead">Inclusive • Active • Connected</p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h2>Latest Highlights</h2>
+        <ul>
+          <li>Cleanup Drive – April 2026</li>
+          <li>Annual Meet – Photos uploaded</li>
+          <li>Scholarship Applications Open</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="events.html">Events & Activities</a></li>
+          <li><a href="articles.html">Articles & Announcements</a></li>
+          <li><a href="docs/by-laws.pdf" target="_blank">By-Laws (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-top py-4">
+    <div class="container d-flex justify-content-between">
+      <small>© <span id="year"></span> Bandhavya Bengaluru</small>
+      <small><a href="sitemap.xml">Sitemap</a> · <a href="robots.txt">Robots</a></small>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
