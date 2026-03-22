@@ -276,3 +276,51 @@
     })();
 
     // Auto-close Bootstrap navbar on link click (mobile)
+    document.querySelectorAll('.navbar .nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var navbar = document.getElementById('mainNav');
+        if (!navbar) return;
+        var bsCollapse = bootstrap.Collapse.getInstance(navbar);
+        if (bsCollapse && navbar.classList.contains('show')) {
+          bsCollapse.hide();
+        }
+      });
+    });
+  </script>
+
+  <!-- ================= Sticky Bottom Ad (Mobile/All devices) ================= -->
+  <div id="adRibbon" class="ad-ribbon d-none" role="region" aria-label="Sponsored message">
+    <div class="container d-flex align-items-center justify-content-between gap-2">
+      <!-- Replace the link and image with your advertiser content later -->
+      <a href="#" target="_blank" rel="noopener nofollow sponsored" class="flex-grow-1">
+        <img src="assets/images/ads/sample-728x90.jpg" alt="Sponsored promotion" loading="lazy" />
+      </a>
+      <button class="btn btn-sm btn-outline-secondary"
+              id="adRibbonClose"
+              aria-label="Close advertisement"
+              title="Close">×</button>
+    </div>
+  </div>
+
+  <script>
+    // Sticky ad ribbon: show after a short delay; remember "Close" for the current session
+    (function(){
+      const key = 'ad_ribbon_closed';
+      const ribbon = document.getElementById('adRibbon');
+      const closeBtn = document.getElementById('adRibbonClose');
+
+      // Only show if not closed in this session
+      if (!sessionStorage.getItem(key)) {
+        // small delay to avoid popping in during first paint
+        setTimeout(() => { ribbon && ribbon.classList.remove('d-none'); }, 1200);
+      }
+
+      // Close behavior
+      closeBtn && closeBtn.addEventListener('click', function(){
+        sessionStorage.setItem(key, '1');
+        ribbon && ribbon.classList.add('d-none');
+      });
+    })();
+  </script>
+</body>
+</html>
