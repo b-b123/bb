@@ -158,3 +158,148 @@
 <!-- ================= Hero ================= -->
 <section class="hero py-5">
   <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <h1 class="display-6 fw-bold mb-3">
+          Welcome to Bandhavya Bengaluru
+        </h1>
+        <p class="lead text-muted mb-4">
+          ಮಧ್ಯ ಕರ್ನಾಟಕದಿಂದ ಬಂದು ಬೆಂಗಳೂರಿನಲ್ಲಿ ನೆಲೆಸಿರುವ ನಾವು, ಒಬ್ಬರಿಗೊಬ್ಬರು
+          ಸಂಬಂಧಿಕರಾಗಿರುತ್ತೇವೆ. ನಮ್ಮ ಸಂಸ್ಕೃತಿ, ಆಚಾರ-ವಿಚಾರ ಹಾಗೂ ಪರಂಪರೆಯ
+          ಸಂರಕ್ಷಣೆಗಾಗಿ ಪ್ರಯತ್ನಿಸುತ್ತೇವೆ.
+        </p>
+        <div class="d-flex gap-3">
+          <a class="btn btn-primary btn-lg" href="events.html">
+            <i class="bi bi-calendar-event me-1"></i> View Events
+          </a>
+          <a class="btn btn-outline-primary btn-lg" href="about.html">
+            <i class="bi bi-info-circle me-1"></i> Know More
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <img class="hero-img"
+             src="assets/images/hero/cover.jpg"
+             alt="Community activities" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Gallery ================= -->
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div>
+        <h2 class="section-title mb-0">Gallery</h2>
+        <p class="section-sub mb-0">A glimpse of our moments</p>
+      </div>
+      <a class="btn btn-sm btn-outline-primary" href="gallery.html">View more</a>
+    </div>
+
+    <div class="row g-2">
+      <div class="col-6 col-md-3">
+        <img class="gallery-thumb" src="assets/images/gallery/g1.jpg" alt="" />
+      </div>
+      <div class="col-6 col-md-3">
+        <img class="gallery-thumb" src="assets/images/gallery/g2.jpg" alt="" />
+      </div>
+      <div class="col-6 col-md-3">
+        <img class="gallery-thumb" src="assets/images/gallery/g3.jpg" alt="" />
+      </div>
+      <div class="col-6 col-md-3">
+        <img class="gallery-thumb" src="assets/images/gallery/g4.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Downloads / Newsletter ================= -->
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <div class="mb-3">
+      <h2 class="section-title">Downloads / Newsletter</h2>
+      <p class="section-sub">
+        Read and download our community newsletters
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body d-flex flex-column">
+
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-file-earmark-pdf-fill fs-1 text-danger me-3"></i>
+              <div>
+                <h3 class="h5 mb-1">Namma Bandhavya</h3>
+                <small class="text-muted">Community Newsletter</small>
+              </div>
+            </div>
+
+            <p class="text-muted flex-grow-1">
+              Our official newsletter featuring trust activities,
+              cultural programs and important announcements.
+            </p>
+
+            <a href="assets/newsletters/namma-bandhavya.pdf"
+               target="_blank"
+               rel="noopener"
+               class="btn btn-outline-primary mt-auto">
+              <i class="bi bi-download me-1"></i> Download PDF
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= Contact ================= -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-sub">Drop us a message or visit our office</p>
+
+    <div class="p-4 bg-light rounded-3">
+      <p>
+        <i class="bi bi-geo-alt text-primary me-2"></i>
+        Bengaluru Bandhavya Charitable Trust (R),
+        Mahalakshmi Layout, Bengaluru – 560086
+      </p>
+      <p>
+        <i class="bi bi-envelope text-primary me-2"></i>
+        <a href="mailto:bandhavyabangalore@gmail.com">
+          bandhavyabangalore@gmail.com
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Footer ================= -->
+<footer class="bg-light border-top py-4">
+  <div class="container d-flex justify-content-between flex-wrap gap-2">
+    <small>
+      © <span id="year"></span> ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.
+    </small>
+    <small>
+      <a href="sitemap.xml">Sitemap</a> ·
+      <a href="robots.txt">Robots</a>
+    </small>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
