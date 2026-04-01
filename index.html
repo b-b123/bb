@@ -3,324 +3,158 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Bandhavya Bengaluru — Official Website</title>
-  <meta name="description" content="Official website of Bengalure Bandhavya Charitable Trust (R). Explore our activities, events, gallery, and ways to connect." />
-  <!-- Bootstrap 5 (CDN) -->
+
+  <meta name="description"
+        content="Official website of Bengaluru Bandhavya Charitable Trust (R). Explore our activities, events, gallery, newsletter and ways to connect." />
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Bootstrap Icons (for small icons in topbar/footer) -->
+
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <!-- Optional: Your custom stylesheet -->
+
+  <!-- Custom CSS -->
   <link href="assets/css/style.css" rel="stylesheet" />
+
   <style>
-    /* Minimal theme polish (safe defaults) */
     :root{
-      --brand:#0d6efd; /* primary */
-      --accent:#198754; /* accent/secondary */
+      --brand:#0d6efd;
+      --accent:#198754;
       --bg-soft:#f8f9fa;
       --text:#212529;
       --muted:#6c757d;
     }
-    html { scroll-behavior: smooth; } /* ✅ smooth anchor scroll */
-    body{ color:var(--text); line-height:1.6; }
-    .topbar{ background:#0d6efd; color:#fff; font-size:.95rem; }
-    .topbar a{ color:#fff; text-decoration:none; }
-    .navbar .nav-link.active{ color:var(--brand) !important; font-weight:600; border-bottom:2px solid var(--brand); }
-    .hero{ background:linear-gradient(0deg, rgba(13,110,253,.06), rgba(13,110,253,.06)); }
-    .hero-img{ width:100%; height:320px; object-fit:cover; border-radius:12px; }
-    .section-title{ margin-bottom:.5rem; font-weight:700; }
-    .section-sub{ color:var(--muted); margin-bottom:1.5rem; }
-    .card{ border-radius:12px; }
-    .gallery-thumb{ width:100%; height:160px; object-fit:cover; border-radius:10px; }
+
+    html { scroll-behavior: smooth; }
+    body { color:var(--text); line-height:1.6; }
+
+    .topbar{
+      background:#0d6efd;
+      color:#fff;
+      font-size:.95rem;
+    }
+
+    .topbar a{
+      color:#fff;
+      text-decoration:none;
+    }
+
+    .navbar .nav-link.active{
+      color:var(--brand) !important;
+      font-weight:600;
+      border-bottom:2px solid var(--brand);
+    }
+
+    .hero{
+      background:linear-gradient(0deg, rgba(13,110,253,.06), rgba(13,110,253,.06));
+    }
+
+    .hero-img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      border-radius:12px;
+    }
+
+    .section-title{
+      margin-bottom:.5rem;
+      font-weight:700;
+    }
+
+    .section-sub{
+      color:var(--muted);
+      margin-bottom:1.5rem;
+    }
+
+    .card{
+      border-radius:12px;
+    }
+
+    .gallery-thumb{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
     footer a{text-decoration:none;}
     footer a:hover{text-decoration:underline;}
-    /* Optional: ensure navbar sits above content when open on mobile */
-    .navbar { z-index:1030; }
 
-    /* ================= Sticky bottom ad ribbon ================= */
-    .ad-ribbon{
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
-      background:#fff;
-      border-top:1px solid rgba(0,0,0,.08);
-      padding:.35rem 0;
-      z-index: 1040;            /* above navbar (≈1030), below Bootstrap modals (1050+) */
-      box-shadow: 0 -6px 20px rgba(0,0,0,.08);
-    }
-    .ad-ribbon img{
-      display:block;
-      width:100%;
-      height:auto;
-      object-fit:contain;
-    }
-    @media (min-width: 768px){
-      .ad-ribbon img{ max-height: 80px; } /* keep neat on larger screens */
-    }
+    .navbar { z-index:1030; }
   </style>
 </head>
+
 <body>
-  <!-- ================= Top Info Bar (email + quick portals) ================= -->
-  <div class="topbar py-1">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
-      <div class="small">
-        <i class="bi bi-envelope"></i>
-        <a href="mailto:bandhavyabangalore@gmail.com" class="ms-1">bandhavyabangalore@gmail.com</a>
-      </div>
-      <div class="d-flex gap-2 small">
-        <!-- Quick links placeholder -->
-      </div>
+
+<!-- ================= Top Bar ================= -->
+<div class="topbar py-1">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="small">
+      <i class="bi bi-envelope me-1"></i>
+      <a href="mailto:bandhavyabangalore@gmail.com">bandhavyabangalore@gmail.com</a>
     </div>
   </div>
+</div>
 
-  <!-- ================= Header / Navbar ================= -->
-  <header>
-    <!-- ✅ navbar-light + sticky-top -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top" aria-label="Primary">
-      <div class="container">
-        <a class="navbar-brand fw-semibold" href="index.html">
-          <!-- <img src="assets/images/logos/logo.png" alt="Logo" height="32" class="me-2" /> -->
-          Bengaluru Bandhavya Charitable Trust (R)
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div id="mainNav" class="collapse navbar-collapse">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="committee.html">Committee</a></li>
-            <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
-            <!-- ✅ Contact anchor to this page -->
-            <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-            <!-- Optional future links:
-            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="events.html">Activities</a></li>
-            <li class="nav-item"><a class="nav-link" href="downloads.html">Downloads</a></li>
-            -->
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- ================= Hero ================= -->
-  <section class="hero py-5">
+<!-- ================= Navbar ================= -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
     <div class="container">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-6">
-          <h1 class="display-6 fw-bold mb-3">Welcome to Bandhavya Bengaluru</h1>
-          <p class="lead text-muted mb-4">
-            ಮಧ್ಯ ಕರ್ನಾಟಕದಿಂದ ಬಂದು ಬೆಂಗಳೂರಿನಲ್ಲಿ ನೆಲೆಸಿರುವ ನಾವು, ಒಬ್ಬರಿಗೊಬ್ಬರು ಸಂಬಂಧಿಕರಾಗಿರುತ್ತೇವೆ. ನಮ್ಮ ಸಂಸ್ಕೃತಿ, ಆಚಾರ- ವಿಚಾರ, ಪರಂಪರೆ, ಪದ್ದತಿಗಳ ರಕ್ಷಣೆಗಾಗಿ ಪ್ರಯತ್ನಿಸುವುದು.
-          </p>
-          <div class="d-flex gap-3">
-            <a class="btn btn-primary btn-lg" href="events.html"><i class="bi bi-calendar-event me-1"></i> View Events</a>
-            <a class="btn btn-outline-primary btn-lg" href="about.html"><i class="bi bi-info-circle me-1"></i> Know More</a>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <img class="hero-img" src="assets/images/hero/cover.jpg" alt="Community activities and members" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= About Us (teaser) ================= -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="section-title">ನಮ್ಮ ಉದ್ದೇಶ</h2>
-      <p class="mb-0">
-        ಸಂಘದ ಸದಸ್ಯರಲ್ಲಿ, ಪರಸ್ಪರ ಗೌರವ, ಆತ್ಮೀಯತೆಯನ್ನು ಮತ್ತು ಪರಸ್ಪರ ಸಹಾಯವೆಂಬ ಸಂದೇಶವನ್ನು ಆಗಾಗ ಸ್ನೇಹಪರ ಕೂಟಗಳನ್ನು ಏರ್ಪಡಿಸುವ ಮೂಲಕ ಹರಡುವುದು. ವಿಶೇಷವಾಗಿ ನಮ್ಮ ಮುಂದಿನ ಪೀಳಿಗೆಯು ಬೇರ್ಪಡದಂತೆ ಒಂದುಗೂಡಿಸುವುದು.
-      </p>
-      <div class="mt-4">
-        <a class="btn btn-outline-secondary" href="about.html">Read full history</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= News & Events ================= -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <div>
-          <h2 class="section-title mb-0">News & Events</h2>
-          <p class="section-sub mb-0">Recent announcements and upcoming activities</p>
-        </div>
-        <a class="btn btn-sm btn-primary" href="events.html">View all</a>
-      </div>
-
-      <div class="row g-4">
-        <!-- Card 1 -->
-        <div class="col-md-4">
-          <article class="card h-100 border-0 shadow-sm">
-            <img class="card-img-top" src="assets/images/events/ev-1.jpg" alt="Monthly Meeting at Kavitha's house" />
-            <div class="card-body">
-              <span class="badge text-bg-primary mb-2">Mar 15, 2026</span>
-              <h3 class="h5 card-title mb-2">Monthly Meeting @ Kavitha's house</h3>
-              <p class="card-text text-muted">Join us for discussions</p>
-              <a class="stretched-link" href="events.html" aria-label="Read more about Monthly Meeting at Kavitha's house"></a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-4">
-          <article class="card h-100 border-0 shadow-sm">
-            <img class="card-img-top" src="assets/images/events/ev-1.jpg" alt="Monthly meeting at Appanna's house" />
-            <div class="card-body">
-              <span class="badge text-bg-success mb-2">April 19, 2026</span>
-              <h3 class="h5 card-title mb-2">Monthly meeting at Appanna's house</h3>
-              <p class="card-text text-muted">Join us for discussions</p>
-              <a class="stretched-link" href="events.html" aria-label="Read more about Monthly meeting at Appanna's house"></a>
-            </div>
-          </article>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-4">
-          <article class="card h-100 border-0 shadow-sm">
-            <img class="card-img-top" src="assets/images/events/ev-3.jpg" alt="Annual Function" />
-            <div class="card-body">
-              <span class="badge text-bg-warning mb-2">May 24, 2026</span>
-              <h3 class="h5 card-title mb-2">Annual Function</h3>
-              <p class="card-text text-muted">Join us for the special day of community recognition and cultural programs.</p>
-              <a class="stretched-link" href="events.html" aria-label="Read more about Annual Function"></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Gallery (teaser) ================= -->
-  <section class="py-5">
-    <div class="container">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <div>
-          <h2 class="section-title mb-0">Gallery</h2>
-          <p class="section-sub mb-0">A glimpse of our recent moments</p>
-        </div>
-        <a class="btn btn-sm btn-outline-primary" href="gallery.html">View more</a>
-      </div>
-      <div class="row g-2">
-        <div class="col-6 col-md-3"><img class="gallery-thumb" src="assets/images/gallery/g1.jpg" alt="Gallery image 1" /></div>
-        <div class="col-6 col-md-3"><img class="gallery-thumb" src="assets/images/gallery/g2.jpg" alt="Gallery image 2" /></div>
-        <div class="col-6 col-md-3"><img class="gallery-thumb" src="assets/images/gallery/g3.jpg" alt="Gallery image 3" /></div>
-        <div class="col-6 col-md-3"><img class="gallery-thumb" src="assets/images/gallery/g4.jpg" alt="Gallery image 4" /></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= Contact & Newsletter ================= -->
-  <!-- ✅ id="contact" for navbar anchor -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-sub">Drop us a message or visit our office.</p>
-          <div class="p-4 bg-white rounded-3 shadow-sm h-100">
-            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Bandhavya Bengaluru Charitable Trust (R), No.654/B, 3rd Cross, Near BNES College, Mahalakshmi Layout, Bangalore - 560086</p>
-            <p class="mb-2"><i class="bi bi-envelope text-primary me-2"></i><a href="mailto:bandhavyabangalore@gmail.com">bandhavyabangalore@gmail.com</a></p>
-            <p class="mb-3"><i class="bi bi-telephone text-primary me-2"></i>+91 90000 00000</p>
-          </div>
-        </div>
-
-        <!-- Newsletter (commented out for now; keep if you want later)
-        <div class="col-lg-6">
-          <h2 class="section-title">Subscribe to our Newsletter</h2>
-          <p class="section-sub">Get the latest updates in your inbox.</p>
-          <form class="p-4 bg-white rounded-3 shadow-sm">
-            <div class="row g-3 align-items-center">
-              <div class="col-md-8">
-                <label for="newsletterEmail" class="visually-hidden">Email address</label>
-                <input type="email" id="newsletterEmail" class="form-control form-control-lg" placeholder="your@email.com" required />
-              </div>
-              <div class="col-md-4 d-grid">
-                <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send me-1"></i> Subscribe</button>
-              </div>
-            </div>
-            <p class="small text-muted mt-2 mb-0">We respect your privacy. Unsubscribe anytime.</p>
-          </form>
-        </div>
-        -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer class="bg-light border-top py-4">
-    <div class="container d-flex justify-content-between flex-wrap gap-2">
-      <small>© <span id="year"></span> ಬಾಂಧವ್ಯ ಬೆಂಗಳೂರು. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</small>
-      <small><a href="sitemap.xml" class="text-decoration-none">Sitemap</a> · <a href="robots.txt" class="text-decoration-none">Robots</a></small>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS (CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Optional: Your custom JS -->
-  <script src="assets/js/main.js"></script>
-  <script>
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // (Optional) Auto-activate nav link by URL filename for reuse in other pages
-    (function(){
-      const current = location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('.navbar .nav-link').forEach(a => {
-        if (a.getAttribute('href') === current) a.classList.add('active');
-        if (current === 'index.html' && location.hash === '#contact' && a.getAttribute('href') === 'index.html#contact') {
-          a.classList.add('active');
-        }
-      });
-    })();
-
-    // Auto-close Bootstrap navbar on link click (mobile)
-    document.querySelectorAll('.navbar .nav-link').forEach(function (link) {
-      link.addEventListener('click', function () {
-        var navbar = document.getElementById('mainNav');
-        if (!navbar) return;
-        var bsCollapse = bootstrap.Collapse.getInstance(navbar);
-        if (bsCollapse && navbar.classList.contains('show')) {
-          bsCollapse.hide();
-        }
-      });
-    });
-  </script>
-
-  <!-- ================= Sticky Bottom Ad (Mobile/All devices) ================= -->
-  <div id="adRibbon" class="ad-ribbon d-none" role="region" aria-label="Sponsored message">
-    <div class="container d-flex align-items-center justify-content-between gap-2">
-      <!-- Replace the link and image with your advertiser content later -->
-      <a href="#" target="_blank" rel="noopener nofollow sponsored" class="flex-grow-1">
-        <img src="assets/images/ads/example_comm_ad4.jpg" alt="Sponsored promotion" loading="lazy" />
+      <a class="navbar-brand fw-semibold" href="index.html">
+        Bengaluru Bandhavya Charitable Trust (R)
       </a>
-      <button class="btn btn-sm btn-outline-secondary"
-              id="adRibbonClose"
-              aria-label="Close advertisement"
-              title="Close">×</button>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+              aria-controls="mainNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="committee.html">Committee</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="achievements.html">Achievements</a>
+          </li>
+
+          <!-- Newsletter PDF Link -->
+          <li class="nav-item">
+            <a class="nav-link"
+               href="assets/newsletters/namma-bandhavya.pdf"
+               target="_blank"
+               rel="noopener">
+              <i class="bi bi-file-earmark-pdf text-danger me-1"></i>
+              Namma Bandhavya
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+
+        </ul>
+      </div>
     </div>
-  </div>
+  </nav>
+</header>
 
-  <script>
-    // Sticky ad ribbon: show after a short delay; remember "Close" for the current session
-    (function(){
-      const key = 'ad_ribbon_closed';
-      const ribbon = document.getElementById('adRibbon');
-      const closeBtn = document.getElementById('adRibbonClose');
-
-      // Only show if not closed in this session
-      if (!sessionStorage.getItem(key)) {
-        // small delay to avoid popping in during first paint
-        setTimeout(() => { ribbon && ribbon.classList.remove('d-none'); }, 1200);
-      }
-
-      // Close behavior
-      closeBtn && closeBtn.addEventListener('click', function(){
-        sessionStorage.setItem(key, '1');
-        ribbon && ribbon.classList.add('d-none');
-      });
-    })();
-  </script>
-</body>
-</html>
+<!-- ================= Hero ================= -->
+<section class="hero py-5">
+  <div class="container">
