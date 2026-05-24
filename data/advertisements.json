@@ -2,18 +2,18 @@
   "ads": [
     {
       "id": 1,
-      "image": "",
-      "productName": "Sharma & Sons Jewellers",
-      "tagline": "Pure Gold, Diamond & Silver Jewellery — Trusted for 25 Years",
-      "advertiserName": "Ramesh Sharma",
+      "image": "assets/images/advertisements/elukoti_agarbatti_.jpg",
+      "productName": "Elukoti Agarbatti",
+      "tagline": "Elukoti Agarbatti Sandal & Lavendar Incense Sticks, 2 in 1 Dual Fragrance, Natural Ingredients, 320 Sticks, 400 Grams (Low Scent and Low Smoke",
+      "advertiserName": "Niranjan",
       "advertiserType": "company",
       "links": [
-        { "label": "Shop on Amazon", "url": "https://amazon.in", "icon": "bi-bag-fill" },
+        { "label": "Shop on Amazon", "url": "https://amzn.in/d/0dg6hamQ", "icon": "bi-bag-fill" },
         { "label": "Visit Website", "url": "https://example.com", "icon": "bi-globe" }
       ],
       "cta": {
         "type": "call",
-        "value": "+919876543210",
+        "value": "+919738328956",
         "label": "Call Now"
       },
       "badge": "Featured",
